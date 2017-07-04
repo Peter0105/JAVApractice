@@ -1,0 +1,22 @@
+package practicejava;
+
+import java.util.Scanner;
+
+public class scanner {
+
+	public static void main(String[] args) {
+		
+		float avg;
+		
+		Scanner input = new Scanner (System.in);
+		int b = input.nextInt();
+		int a = input.nextInt();
+		int c = input.nextInt();
+		
+		avg = (b+a+c)/2;
+		
+		System.out.println(avg);
+
+	}
+
+}

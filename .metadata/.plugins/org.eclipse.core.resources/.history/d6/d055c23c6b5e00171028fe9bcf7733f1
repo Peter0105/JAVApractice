@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+		int b = input.nextInt();
+		int n = input.nextInt();
+		int c [] = new int [n];
+		int i, tem, a, k;
+		
+		for(k=0; k<b; k++){
+
+			for(i=0; i<n; i++){
+				c[i] = input.nextInt();	
+			}
+			
+			for(i=0; i<n-1; i++){
+				int indexMin = i;
+			
+				for(int j=i+1; j<n; j++){
+					if(c[indexMin]>c[j]){
+						indexMin = j;
+					}
+				}
+				tem = c[indexMin];
+				c[indexMin] = c[i];
+				c[i] = tem;
+			}
+			a=(c[n-1]-c[0])*2;
+			System.out.println(a);
+		}
+	}
+}
+
+
